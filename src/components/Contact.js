@@ -1,64 +1,95 @@
-import { clear } from "@testing-library/user-event/dist/clear";
-import { useState, useEffect } from "react";
-import { Col, Row, Container } from "react-bootstrap";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from "../assets/img/Softdone test.png";
-
+import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import contactImg from "../assets/img/contact-img.svg";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Contact = () => {
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Websites', 'Mobile apps', 'Web apps', 'E-commerce', 'Landing pages'];
-    const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const period = 500;
+    const formInitialDetails = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+    }
+    const [formDetails, setFormDetails] = useState(formInitialDetails);
+    const [buttonText, setButtonText] = useState('Send');
+    const [status, setStatus] = useState({});
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta);
+    const onFormUpdate = (category, value) => {
+        setFormDetails({
+            ...formDetails,
+            [category]: value
+        })
+    }
 
-        return () => { clearInterval(ticker) }
-    }, [text]);
-
-    const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updateText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-        setText(updateText);
-
-        if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2.3);
-        }
-
-        if (!isDeleting && updateText === fullText) {
-            setIsDeleting(true);
-            setDelta(period);
-        } else if (isDeleting && updateText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setDelta(300);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setButtonText("Sending...");
+        let response = await fetch("http://localhost:5000/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(formDetails),
+        });
+        setButtonText("Send");
+        let result = await response.json();
+        setFormDetails(formInitialDetails);
+        if (result.code === 200) {
+            setStatus({ succes: true, message: 'Message sent successfully' });
+        } else {
+            setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
         }
     };
 
     return (
-        <section className="banner" id="contact">
+        <section className="contact" id="connect">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={12} xl={12}>
-                        <h2>{"We make "} </h2>
-                        <h1>{"</> "}<span className="wrap">{text}</span></h1>
-                        <p style={{ color: 'white', textAlign: 'center' }}>Let's turn your idea into a reality</p>
-
-                        <a id="link-card-project" href="https://www.linkedin.com/company/softdone/" target="_blank"><button onClick={() => console.log('Hi, you are connect')}>Contact us <ArrowRightCircle size={25} /></button></a>
+                    <Col size={12} md={6}>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us" />
+                            }
+                        </TrackVisibility>
                     </Col>
-                    {/* <Col xs={12} md={12} xl={12}>
-                        <img src={headerImg} alt="Header img"></img>
-                    </Col> */}
+                    <Col size={12} md={6}>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                    <h2>Get In Touch</h2>
+                                    <form onSubmit={handleSubmit}>
+                                        <Row>
+                                            <Col size={12} className="px-1">
+                                                <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                                            </Col>
+                                            <Col size={12} sm={6} className="px-1">
+                                                <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} />
+                                            </Col>
+                                            <Col size={12} sm={6} className="px-1">
+                                                <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                                            </Col>
+                                            <Col size={12} sm={6} className="px-1">
+                                                <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)} />
+                                            </Col>
+                                            <Col size={12} className="px-1">
+                                                <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                                                <button type="submit"><span>{buttonText}</span></button>
+                                            </Col>
+                                            {
+                                                status.message &&
+                                                <Col>
+                                                    <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                                                </Col>
+                                            }
+                                        </Row>
+                                    </form>
+                                </div>}
+                        </TrackVisibility>
+                    </Col>
                 </Row>
             </Container>
         </section>
     )
-
 }
