@@ -1,0 +1,159 @@
+import { Container, Row, Col } from "react-bootstrap";
+import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
+
+import tech1 from '../assets/img/tech-vuejs.svg';
+import tech2 from '../assets/img/tech-sql.svg';
+import tech3 from '../assets/img/tech-react.svg';
+import tech4 from '../assets/img/tech-mongo.svg';
+import tech5 from '../assets/img/tech-laravel.svg';
+import tech6 from '../assets/img/tech-github.svg';
+import tech7 from '../assets/img/tech-flutter.svg';
+import tech8 from '../assets/img/tech-figma.svg';
+import tech9 from '../assets/img/tech-bootstrap.svg';
+
+
+import tech12 from '../assets/img/tech-python.svg';
+
+
+
+export const Skills = () => {
+
+    const technologies = [
+        {
+            title: "Flutter",
+            imgUrl: tech7,
+        },
+
+        {
+            title: "Vue Js",
+            imgUrl: tech1,
+        },
+
+        {
+            title: "Laravel",
+            imgUrl: tech5,
+        },
+
+        {
+            title: "React",
+            imgUrl: tech3,
+        },
+
+        // {
+        //     title: "Quasar",
+        //     imgUrl: tech10,
+        // },
+
+        // {
+        //     title: "Magento",
+        //     imgUrl: tech11,
+        // },
+
+        {
+            title: "Python",
+            imgUrl: tech12,
+        },
+
+        {
+            title: "SQL",
+            imgUrl: tech2,
+        },
+
+        {
+            title: "Mongo DB",
+            imgUrl: tech4,
+        },
+
+        {
+            title: "Bootstrap",
+            imgUrl: tech9,
+        },
+        {
+            title: "Figma",
+            imgUrl: tech8,
+        },
+
+        // {
+        //     title: "Github",
+        //     imgUrl: tech6,
+        // },
+
+    ];
+
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: {
+                max: 4000,
+                min: 3000
+            },
+            items: 5
+        },
+
+        desktop: {
+            breakpoint: {
+                max: 3000,
+                min: 1024
+            },
+            items: 3
+        },
+
+
+        tablet: {
+            breakpoint: {
+                max: 1024,
+                min: 464
+            },
+            items: 2
+        },
+
+        mobile: {
+            breakpoint: {
+                max: 464,
+                min: 0
+            },
+            items: 1
+        },
+
+    };
+
+    return (
+        <section className="skill" id="skills">
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="skill-bx">
+
+                            <div className="container" id="skill-bx-text">
+                                <h2 style={{ color: '#0658F6' }}>
+                                    Technologies
+                                </h2>
+                                <p style={{ color: '#0658F6' }}>At Softdone, we develop in:</p>
+
+                            </div>
+
+                            <Carousel responsive={responsive} infinite={true} className="skill-slider">
+
+                                {
+                                    technologies.map((technology, index) => {
+                                        return (
+
+                                            <div className="item"
+                                                key={index}>
+                                                <img src={technology.imgUrl} alt="anImage" />
+                                                <h5>{technology.title}</h5>
+
+                                            </div>
+                                        )
+                                    })
+                                }
+
+                            </Carousel>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
+        </section>
+    )
+}
