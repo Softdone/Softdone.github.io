@@ -1,6 +1,5 @@
 {
-    "homepage": "https://BlurryBunny.github.io/my-portfolio-react",
-
+    "homepage": "https://softdone.github.io/softdone-landing-page",
     "name": "personal-porfolio",
     "version": "0.1.0",
     "private": true,
@@ -8,15 +7,15 @@
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
-        "bootstrap": "^5.2.2",
         "animate.css": "^4.1.1",
+        "bootstrap": "^5.2.2",
         "react": "^18.2.0",
         "react-bootstrap": "^2.5.0",
         "react-bootstrap-icons": "^1.9.1",
         "react-dom": "^18.2.0",
         "react-multi-carousel": "^2.8.2",
-        "react-scripts": "^5.0.1",
         "react-on-screen": "^2.1.1",
+        "react-scripts": "^5.0.1",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
