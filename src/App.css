@@ -420,8 +420,67 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+
+/************ Project2 Css ************/
+
+.project {
+  padding: 50px 0 50px 0;
+  position: relative;
+  background-image: url('./assets/img/bkg-blue.png');
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-bx {
+  background: rgba(64, 148, 227, 0.7);
+
+  border-radius: 64px;
+  text-align: center;
+  padding: 40px;
+  margin-top: -10px;
+}
+
+#project-bx-text {
+  color: #4A2FBD;
+  width: 70%;
+  height: auto;
+}
+
+.project h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+.project-slider {
+  width: 80%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.project-slider .item img {
+  width: 45%;
+  margin: 0 auto 10px auto;
+}
+
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
 /************ Projects Css ************/
-#link-card-project {
+/* #link-card-project {
   text-decoration: none;
   color: #fff;
 }
@@ -573,9 +632,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
-}
+} */
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
   background: #0658F6;
   /* padding: 60px 0 200px 0; */
@@ -664,8 +723,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-
-/* Footer */
+/************ Footer Css ************/
 
 .footer {
   padding: 0 0 50px 0;
