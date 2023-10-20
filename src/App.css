@@ -662,7 +662,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .testimonial h2 {
   font-size: 45px;
   font-weight: 700;
-  color: #ffffff; /* Añadir un color contrastante para resaltar el título */
+  color: #ffffff;
+  /* Añadir un color contrastante para resaltar el título */
 }
 
 .testimonial p {
@@ -684,17 +685,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .testimonial-slider .item {
-  background: rgba(255, 255, 255, 0.9); /* Hacer el fondo un poco más opaco */
-  border-radius: 20px; /* Reducir el radio del borde para un aspecto más moderno */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Añadir una sombra suave */
+  background: rgba(255, 255, 255, 0.9);
+  /* Hacer el fondo un poco más opaco */
+  border-radius: 20px;
+  /* Reducir el radio del borde para un aspecto más moderno */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Añadir una sombra suave */
   text-align: center;
   width: 80%;
   margin: 10px auto auto auto;
-  transition: transform 0.3s; /* Añadir una transición suave al hacer hover */
+  transition: transform 0.3s;
+  /* Añadir una transición suave al hacer hover */
 }
 
 .testimonial-slider .item:hover {
-  transform: translateY(-10px); /* Efecto elevación al pasar el mouse */
+  transform: translateY(-10px);
+  /* Efecto elevación al pasar el mouse */
 }
 
 .testimonial-slider .item img {
@@ -702,8 +708,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto 10px auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 50%; /* Hacer que la imagen sea redonda */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave a la imagen */
+  border-radius: 50%;
+  /* Hacer que la imagen sea redonda */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave a la imagen */
 }
 
 .background-image-left {

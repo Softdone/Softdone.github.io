@@ -1,6 +1,6 @@
 
 import { Container, Row, Col, Tab } from "react-bootstrap";
-// import { ProjectCard } from "./ProjectCard";
+// import { ProjectCarousel } from "./ProjectCarousel";
 import Nav from 'react-bootstrap/Nav';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
@@ -13,6 +13,7 @@ import proj6 from '../assets/img/alowes.png';
 import proj7 from '../assets/img/nasa.png';
 import proj8 from '../assets/img/depsthink.png';
 import proj9 from '../assets/img/saluddigna.png';
+import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Projects = () => {
 
@@ -169,6 +170,9 @@ export const Projects = () => {
                                         <Nav.Link eventKey="second">Web Development</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
+
+
+
                                 <Tab.Content>
                                     <Tab.Pane eventKey="first">
                                         <Row>
@@ -181,6 +185,7 @@ export const Projects = () => {
                                                                     key={index}>
                                                                     <img src={project.imgUrl} alt="anImage" />
                                                                     <h5>{project.title}</h5>
+                                                                    {/* <ProjectCarousel {...project}></ProjectCarousel> */}
                                                                 </div>
                                                             )
                                                         })
@@ -194,12 +199,12 @@ export const Projects = () => {
                                             {
                                                 <Carousel responsive={responsive} infinite={true} className="project-slider">
                                                     {
-                                                        webs.map((web, index) => {
+                                                        webs.map((project, index) => {
                                                             return (
                                                                 <div className="item"
                                                                     key={index}>
-                                                                    <img src={web.imgUrl} alt="anImage" />
-                                                                    <h5>{web.title}</h5>
+
+                                                                    <ProjectCarousel {...project}></ProjectCarousel>
                                                                 </div>
                                                             )
                                                         })
@@ -209,6 +214,13 @@ export const Projects = () => {
                                         </Row>
                                     </Tab.Pane>
                                 </Tab.Content>
+
+
+
+
+
+
+
                             </Tab.Container>
                         </div>
                     </Col>
