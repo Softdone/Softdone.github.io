@@ -15,13 +15,14 @@ export const Testimonials = () => {
     },
 
     {
-      title: "Motivacion secu",
-      imgUrl: proj2,
+      title: "Servismedicamp",
+      subtitle: "Estamos orgullosos del desarrollo de nuestra app. Nuestro enfoque colaborativo y detallado garantizó una solución a medida que cumple con sus necesidades y supera expectativas.",
+      imgUrl: proj1,
     },
-
     {
-      title: "Room reserve",
-      imgUrl: proj3,
+      title: "Servismedicamp",
+      subtitle: "Estamos orgullosos del desarrollo de nuestra app. Nuestro enfoque colaborativo y detallado garantizó una solución a medida que cumple con sus necesidades y supera expectativas.",
+      imgUrl: proj1,
     },
   ];
 
@@ -68,7 +69,7 @@ export const Testimonials = () => {
           <Col>
             <div className="testimonial-bx">
               <div className="container" id="testimonial-bx-text">
-                <h2 style={{ color: '#fff' }}>
+                <h2 >
                   Testimonials
                 </h2>
                 <p style={{ color: '#fff' }}>People that trust in our work</p>
@@ -83,8 +84,8 @@ export const Testimonials = () => {
                       <div className="item"
                         key={index}>
                         <img src={testimonial.imgUrl} alt="anImage" />
-                        <h5>{testimonial.title}</h5>
-                        <p>{testimonial.subtitle}</p>
+                        <h5 style={{ color: '#0658F6', marginTop: '5px' }}>{testimonial.title}</h5>
+                        <p >{testimonial.subtitle}</p>
                       </div>
                     )
                   })
