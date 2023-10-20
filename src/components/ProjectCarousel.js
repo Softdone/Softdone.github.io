@@ -1,6 +1,6 @@
 import { Col } from "react-bootstrap";
 
-export const ProjectCard = ({ title, description, imgUrl, projectUrl }) => {
+export const ProjectCarousel = ({ title, description, imgUrl, projectUrl }) => {
     return (
         <Col sm={12} md={6}  >
             <a href={projectUrl} target="_blank"  id="link-card-project">
