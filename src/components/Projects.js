@@ -1,6 +1,6 @@
 
 import { Container, Row, Col, Tab } from "react-bootstrap";
-// import { ProjectCarousel } from "./ProjectCarousel";
+import { ProjectCard } from "./ProjectCard";
 import Nav from 'react-bootstrap/Nav';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
@@ -8,12 +8,12 @@ import proj1 from '../assets/img/servis.png';
 import proj2 from '../assets/img/tono.png';
 import proj3 from '../assets/img/roomreserve.png';
 import proj4 from '../assets/img/firedots.png';
-import proj5 from '../assets/img/elaina.png';
-import proj6 from '../assets/img/alowes.png';
-import proj7 from '../assets/img/nasa.png';
+import proj5 from '../assets/img/elainapc.png';
+import proj6 from '../assets/img/alowespc.png';
+import proj7 from '../assets/img/nasapc.png';
 import proj8 from '../assets/img/depsthink.png';
 import proj9 from '../assets/img/saluddigna.png';
-import { ProjectCarousel } from "./ProjectCarousel";
+// import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Projects = () => {
 
@@ -39,21 +39,6 @@ export const Projects = () => {
         },
 
         {
-            title: "Elaina",
-            imgUrl: proj5,
-        },
-
-        {
-            title: "Alowes Marketing Solutions",
-            imgUrl: proj6,
-        },
-
-        {
-            title: "Pocket U",
-            imgUrl: proj7,
-        },
-
-        {
             title: "Depsthink",
             imgUrl: proj8,
         },
@@ -65,25 +50,7 @@ export const Projects = () => {
     ];
 
     const webs = [
-        {
-            title: "Servismedicamp",
-            imgUrl: proj1,
-        },
-
-        {
-            title: "Motivacion secu",
-            imgUrl: proj2,
-        },
-
-        {
-            title: "Room reserve",
-            imgUrl: proj3,
-        },
-
-        {
-            title: "Firedots",
-            imgUrl: proj4,
-        },
+    
 
         {
             title: "Elaina",
@@ -98,15 +65,6 @@ export const Projects = () => {
         {
             title: "Pocket U",
             imgUrl: proj7,
-        },
-
-        {
-            title: "Depsthink",
-            imgUrl: proj8,
-        },
-        {
-            title: "Healthy Hive",
-            imgUrl: proj9,
         },
 
     ];
@@ -170,9 +128,6 @@ export const Projects = () => {
                                         <Nav.Link eventKey="second">Web Development</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
-
-
-
                                 <Tab.Content>
                                     <Tab.Pane eventKey="first">
                                         <Row>
@@ -197,30 +152,17 @@ export const Projects = () => {
                                     <Tab.Pane eventKey="second">
                                         <Row>
                                             {
-                                                <Carousel responsive={responsive} infinite={true} className="project-slider">
-                                                    {
-                                                        webs.map((project, index) => {
-                                                            return (
-                                                                <div className="item"
-                                                                    key={index}>
-
-                                                                    <ProjectCarousel {...project}></ProjectCarousel>
-                                                                </div>
-                                                            )
-                                                        })
-                                                    }
-                                                </Carousel>
+                                                webs.map((project, index) => {
+                                                    return (
+                                                        <ProjectCard
+                                                            key={index}
+                                                            {...project}></ProjectCard>
+                                                    )
+                                                })
                                             }
                                         </Row>
                                     </Tab.Pane>
                                 </Tab.Content>
-
-
-
-
-
-
-
                             </Tab.Container>
                         </div>
                     </Col>
