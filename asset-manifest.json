@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/softdone-landing-page/static/css/main.149af487.css",
-    "main.js": "/softdone-landing-page/static/js/main.4fd391c4.js",
+    "main.css": "/softdone-landing-page/static/css/main.8117cb1f.css",
+    "main.js": "/softdone-landing-page/static/js/main.ca6dd37c.js",
     "static/js/787.72fc65e2.chunk.js": "/softdone-landing-page/static/js/787.72fc65e2.chunk.js",
+    "static/media/testgift2.gif": "/softdone-landing-page/static/media/testgift2.6158c0871db7bef1d9df.gif",
+    "static/media/testgift.gif": "/softdone-landing-page/static/media/testgift.f043c685b03ef16207e8.gif",
+    "static/media/testgift3.gif": "/softdone-landing-page/static/media/testgift3.d029b52bfd7af62c5df7.gif",
     "static/media/alowespc.png": "/softdone-landing-page/static/media/alowespc.e228fde78704a75d52b2.png",
     "static/media/nasapc.png": "/softdone-landing-page/static/media/nasapc.4cc1ec35aecf2e738d2c.png",
     "static/media/elainapc.png": "/softdone-landing-page/static/media/elainapc.6a7272b14a6d51329f27.png",
@@ -27,7 +30,6 @@
     "static/media/tech-laravel.svg": "/softdone-landing-page/static/media/tech-laravel.e7ac7ce55fce6b4df97b5d1359c934ca.svg",
     "static/media/tech-mongo.svg": "/softdone-landing-page/static/media/tech-mongo.0f117d81f8c528a25df9e5dc90f7c3d7.svg",
     "static/media/tech-figma.svg": "/softdone-landing-page/static/media/tech-figma.daa4c8862eab92c89fc17ba3a1681d1b.svg",
-    "static/media/tech-github.svg": "/softdone-landing-page/static/media/tech-github.3911bf9a76365ec5ee1c4bfcb6cdc24b.svg",
     "static/media/tech-flutter.svg": "/softdone-landing-page/static/media/tech-flutter.e97a9c821962a862ae98b1fd8263f3cd.svg",
     "static/media/tech-vuejs.svg": "/softdone-landing-page/static/media/tech-vuejs.89d1328f524624bcdd272767196ce107.svg",
     "static/media/logo-name-sd.svg": "/softdone-landing-page/static/media/logo-name-sd.55d3e1f03a19d31b50ea01e7df6a452f.svg",
@@ -36,12 +38,12 @@
     "index.html": "/softdone-landing-page/index.html",
     "static/media/nav-icon1.svg": "/softdone-landing-page/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/softdone-landing-page/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.149af487.css.map": "/softdone-landing-page/static/css/main.149af487.css.map",
-    "main.4fd391c4.js.map": "/softdone-landing-page/static/js/main.4fd391c4.js.map",
+    "main.8117cb1f.css.map": "/softdone-landing-page/static/css/main.8117cb1f.css.map",
+    "main.ca6dd37c.js.map": "/softdone-landing-page/static/js/main.ca6dd37c.js.map",
     "787.72fc65e2.chunk.js.map": "/softdone-landing-page/static/js/787.72fc65e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.149af487.css",
-    "static/js/main.4fd391c4.js"
+    "static/css/main.8117cb1f.css",
+    "static/js/main.ca6dd37c.js"
   ]
 }
