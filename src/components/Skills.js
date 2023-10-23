@@ -7,7 +7,7 @@ import tech2 from '../assets/img/tech-sql.svg';
 import tech3 from '../assets/img/tech-react.svg';
 import tech4 from '../assets/img/tech-mongo.svg';
 import tech5 from '../assets/img/tech-laravel.svg';
-import tech6 from '../assets/img/tech-github.svg';
+// import tech6 from '../assets/img/tech-github.svg';
 import tech7 from '../assets/img/tech-flutter.svg';
 import tech8 from '../assets/img/tech-figma.svg';
 import tech9 from '../assets/img/tech-bootstrap.svg';
@@ -39,16 +39,6 @@ export const Skills = () => {
             title: "React",
             imgUrl: tech3,
         },
-
-        // {
-        //     title: "Quasar",
-        //     imgUrl: tech10,
-        // },
-
-        // {
-        //     title: "Magento",
-        //     imgUrl: tech11,
-        // },
 
         {
             title: "Python",

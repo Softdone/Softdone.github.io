@@ -1,26 +1,38 @@
-import { Container, Row, Col } from "react-bootstrap";
+
+import { Container, Row, Col, Tab } from "react-bootstrap";
+import { ProjectCard } from "./ProjectCard";
+import Nav from 'react-bootstrap/Nav';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
-import proj1 from '../assets/img/servis.png';
-import proj2 from '../assets/img/tono.png';
-import proj3 from '../assets/img/roomreserve.png';
+import { TimelineDisplay } from "./TimelineDisplay";
+
+import proj1 from '../assets/img/testgift.gif';
+import proj2 from '../assets/img/testgift2.gif';
+import proj3 from '../assets/img/testgift3.gif';
+// import proj3 from '../assets/img/roomreserve.png';
+// import proj4 from '../assets/img/firedots.png';
+// import proj5 from '../assets/img/elainapc.png';
+// import proj6 from '../assets/img/alowespc.png';
+// import proj7 from '../assets/img/nasapc.png';
+// import proj8 from '../assets/img/depsthink.png';
+// import proj9 from '../assets/img/saluddigna.png';
+// import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Timeline = () => {
 
-    const testimonials = [
+    const Promo1 = [
         {
             title: "Servismedicamp",
-            subtitle: "Servismedicamp",
             imgUrl: proj1,
         },
-
         {
             title: "Motivacion secu",
             imgUrl: proj2,
         },
-
+    ];
+    const Promo2 = [
         {
-            title: "Room reserve",
+            title: "Servismedicamp",
             imgUrl: proj3,
         },
     ];
@@ -31,7 +43,7 @@ export const Timeline = () => {
                 max: 4000,
                 min: 3000
             },
-            items: 3
+            items: 1
         },
 
         desktop: {
@@ -62,37 +74,33 @@ export const Timeline = () => {
     };
 
     return (
-        <section className="testimonial" id="testimonials">
+        <section className="timeline" id="timelines">
             <Container>
                 <Row>
                     <Col>
-                        <div className="testimonial-bx">
-
-                            <div className="container" id="testimonial-bx-text">
-                                <h2 style={{ color: '#fff' }}>
-                                    Timeline
-                                </h2>
-                                <p style={{ color: '#fff' }}>People that trust in our work</p>
-
-                            </div>
-
-                            <Carousel responsive={responsive} infinite={true} className="testimonial-slider">
-
+                        <div className="timeline-bx">
+                            <Row>
                                 {
-                                    testimonials.map((testimonial, index) => {
+                                    Promo1.map((timeline, index) => {
                                         return (
-
-                                            <div className="item"
-                                                key={index}>
-                                                <img src={testimonial.imgUrl} alt="anImage" />
-                                                <h5>{testimonial.title}</h5>
-                                                <p>{testimonial.subtitle}</p>
-
-                                            </div>
+                                            <TimelineDisplay
+                                                key={index}
+                                                {...timeline}></TimelineDisplay>
                                         )
                                     })
                                 }
-                            </Carousel>
+                            </Row>
+                            <Row>
+                                {
+                                    Promo2.map((timeline, index) => {
+                                        return (
+                                            <TimelineDisplay
+                                                key={index}
+                                                {...timeline}></TimelineDisplay>
+                                        )
+                                    })
+                                }
+                            </Row>
                         </div>
                     </Col>
                 </Row>

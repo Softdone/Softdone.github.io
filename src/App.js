@@ -18,8 +18,9 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
-      {/* <Timeline /> */}
-      {/* <AboutUs /> */}
+
+      <Timeline />
+            {/* <AboutUs /> */}
       <Skills />
       <Projects />
       <Testimonials />
