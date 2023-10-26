@@ -1,8 +1,8 @@
 
 import { Container, Row, Col, Tab } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import Nav from 'react-bootstrap/Nav';
-import Carousel from 'react-multi-carousel';
+// import { ProjectCard } from "./ProjectCard";
+// import Nav from 'react-bootstrap/Nav';
+// import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import { TimelineDisplay } from "./TimelineDisplay";
 
