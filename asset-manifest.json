@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/softdone.github.io/static/css/main.1d638e4c.css",
+    "main.css": "/softdone.github.io/static/css/main.6d3a5bda.css",
     "main.js": "/softdone.github.io/static/js/main.0a14f410.js",
     "static/js/787.72fc65e2.chunk.js": "/softdone.github.io/static/js/787.72fc65e2.chunk.js",
     "static/media/testgift2.gif": "/softdone.github.io/static/media/testgift2.6158c0871db7bef1d9df.gif",
@@ -38,12 +38,12 @@
     "index.html": "/softdone.github.io/index.html",
     "static/media/nav-icon1.svg": "/softdone.github.io/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/softdone.github.io/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.1d638e4c.css.map": "/softdone.github.io/static/css/main.1d638e4c.css.map",
+    "main.6d3a5bda.css.map": "/softdone.github.io/static/css/main.6d3a5bda.css.map",
     "main.0a14f410.js.map": "/softdone.github.io/static/js/main.0a14f410.js.map",
     "787.72fc65e2.chunk.js.map": "/softdone.github.io/static/js/787.72fc65e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d638e4c.css",
+    "static/css/main.6d3a5bda.css",
     "static/js/main.0a14f410.js"
   ]
 }
