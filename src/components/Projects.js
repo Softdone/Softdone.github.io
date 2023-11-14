@@ -13,6 +13,7 @@ import proj6 from '../assets/img/alowespc.png';
 import proj7 from '../assets/img/nasapc.png';
 import proj8 from '../assets/img/depsthink.png';
 import proj9 from '../assets/img/saluddigna.png';
+import proj10 from '../assets/img/Valofast.png';
 // import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Projects = () => {
@@ -64,6 +65,11 @@ export const Projects = () => {
         {
             title: "Pocket U",
             imgUrl: proj7,
+        },
+
+        {
+            title: "Valofast",
+            imgUrl: proj10,
         },
 
     ];
