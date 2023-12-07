@@ -19,11 +19,7 @@ import proj10 from '../assets/img/Valofast.png';
 export const Projects = () => {
 
     const mobiles = [
-        {
-            title: "Servismedicamp",
-            imgUrl: proj1,
-        },
-
+  
         {
             title: "Motivacion secu",
             imgUrl: proj2,
@@ -47,6 +43,11 @@ export const Projects = () => {
             title: "Healthy Hive",
             imgUrl: proj9,
         },
+        {
+            title: "Servismedicamp",
+            imgUrl: proj1,
+        },
+
 
     ];
 

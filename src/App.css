@@ -433,6 +433,439 @@ nav.navbar .navbar-collapse {
   }
 }
 
+/* ServicesSection.css */
+
+.services-wrapper {
+  /* This ensures everything is centered and limits the width */
+  text-align: center;
+  max-width: auto;
+  margin: 0 auto;
+  background-color: #0658F6;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  /* Example size, adjust as needed */
+  color: #ffffff;
+  /* Example color, adjust as needed */
+  margin-bottom: 1rem;
+  /* Space before the services section starts */
+  text-transform: uppercase;
+  /* Stylistic choice for titles */
+}
+
+.services-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  /* This will make sure that all child elements stretch to the same height */
+  padding: 40px 20px;
+  background-color: #0658F6;
+  gap: 20px;
+  /* This adds space between the service categories */
+}
+
+.service-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  place-items: center;
+  padding: 20px;
+  flex: 1;
+  /* This ensures that all service-category elements take up equal width */
+  min-height: 300px;
+  /* Adjust the min-height as needed to ensure they start off the same */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  /* or any other color */
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.service-category:hover {
+  transform: translateY(-5px);
+  /* Slight raise on hover for interactivity */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Enhanced shadow on hover for depth */
+}
+
+.service-icon {
+  font-size: 4rem; /* Haz el ícono más grande si es necesario */
+  color: #0658F6; /* Ajusta a un azul claro según la imagen proporcionada */
+  margin-bottom: 1rem;
+  align-self: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px; /* Puedes ajustar esto si necesitas que el contenedor del ícono sea más grande */
+  height: 64px; /* Asegúrate de que width y height sean iguales para mantener la forma circular */
+}
+
+.service-category span {
+  font-size: 4rem; /* Haz el ícono más grande si es necesario */
+  color: #0658F6; /* Ajusta a un azul claro según la imagen proporcionada */
+  margin-bottom: 1rem;
+}
+
+
+
+.service-icon:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón por encima */
+  color: #003cb3; /* Cambiamos el color a un azul más oscuro al pasar el ratón por encima, si se desea */
+}
+
+.service-category h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  /* Tamaño de fuente grande para mayor impacto visual */
+  font-weight: bold;
+  /* Negrita para destacar el título */
+  margin-bottom: 20px;
+  /* Espacio debajo para separarlo del contenido que sigue */
+  color: #000;
+  /* Color negro para el texto, puedes cambiarlo por un gradiente si deseas */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* Sombra de texto sutil para profundidad */
+  letter-spacing: 0.05em;
+  /* Espaciado entre letras para mejorar la legibilidad */
+  text-transform: uppercase;
+  /* Transforma el texto a mayúsculas para un look distintivo */
+  transition: color 0.3s ease;
+  /* Transición suave para los cambios de color */
+
+  /* Estilos de gradiente para el texto, opcional */
+  background: -webkit-linear-gradient(45deg, #0658F6, #0658F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Añadir una animación que haga 'respirar' el texto, opcional */
+  animation: pulse 6s infinite;
+}
+
+/* Define la animación pulse */
+@keyframes pulse {
+  0% {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  50% {
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.service-category h2:hover {
+  color: #0658F6;
+  /* Cambia el color del texto al pasar el mouse para interactividad */
+  cursor: pointer;
+  /* Cambia el cursor para indicar que el título es interactivo */
+}
+
+.service-category ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  /* Centrar la lista horizontalmente si es necesario */
+  width: 100%;
+  max-width: 600px;
+  /* Establecer una anchura máxima para la lista */
+  background: #ffffff;
+  /* Color de fondo para la lista */
+  border-radius: 8px;
+  /* Bordes redondeados para la lista */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil para la lista */
+  overflow: hidden;
+  /* Asegura que todo el contenido se ajuste a los bordes redondeados */
+}
+
+.service-category li {
+  line-height: 1.5;
+  /* Espaciado de línea para mejor legibilidad */
+  font-size: 1rem;
+  /* Tamaño de fuente estándar */
+  color: #000;
+  /* Color del texto */
+  padding: 10px 20px;
+  /* Añade un poco de relleno para hacer cada elemento `li` más clickeable */
+  border-bottom: 1px solid #eaeaea;
+  /* Línea divisora sutil entre elementos de la lista */
+  transition: background-color 0.3s ease;
+  /* Transición suave para el efecto hover */
+}
+
+.service-category li:last-child {
+  border-bottom: none;
+  /* Elimina el borde del último elemento para mantener la uniformidad */
+}
+
+.service-category li:hover {
+  background-color: #f8f8f8;
+  /* Cambia el color de fondo al pasar el cursor */
+  cursor: pointer;
+  /* Cambia el cursor para indicar que el elemento es interactivo */
+}
+
+/* Media queries para pantallas de tabletas */
+@media (max-width: 768px) {
+  .services-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .service-category {
+    /* Restablecer la propiedad flex que no se necesita para la disposición en columna */
+    flex: none;
+    width: 100%;
+    /* Ocupar el ancho completo en dispositivos más pequeños */
+    min-height: 0;
+    /* O puedes ajustar a una altura mínima específica si es necesario */
+    margin-bottom: 20px;
+    /* Añadir espacio entre categorías */
+  }
+}
+
+/* Media queries para pantallas de móviles */
+@media (max-width: 600px) {
+  .services-section {
+    flex-direction: column;
+    /* Los elementos se apilan verticalmente */
+    padding: 20px 10px;
+    /* Reducimos el padding para ahorrar espacio */
+    gap: 10px;
+    /* Menor espacio entre categorías de servicio */
+  }
+
+  .service-category {
+    width: 100%;
+    /* Cada categoría de servicio toma el ancho completo de la pantalla */
+    min-height: auto;
+    /* Altura mínima automática para acomodar el contenido */
+    padding: 20px;
+    /* Espacio interno suficiente */
+    margin-bottom: 20px;
+    /* Espacio adicional en la parte inferior de cada categoría */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra más sutil para no sobrecargar */
+    /* Restablecemos cualquier propiedad flex que pudiera interferir con el diseño de columna */
+    flex: none;
+    align-items: stretch;
+    /* Esto asegura que el texto y los elementos se estiren a los lados */
+  }
+
+  .service-category:hover {
+    /* En dispositivos móviles, el efecto hover no es tan relevante, así que lo desactivamos */
+    transform: none;
+    box-shadow: none;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    /* Reducimos el tamaño de los íconos para dispositivos más pequeños */
+  }
+
+  .service-category h2 {
+    font-size: 1.2rem;
+    /* También reducimos el tamaño del título para adaptarnos al espacio */
+    margin-bottom: 15px;
+    /* Menos espacio debajo del título */
+    /* Eliminamos el gradiente para simplificar y mejorar la legibilidad en pantallas pequeñas */
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+
+  .service-category ul {
+    max-width: none;
+    /* Permitimos que la lista ocupe el ancho disponible */
+  }
+
+  .service-category li {
+    font-size: 0.9rem;
+    /* Tamaño de fuente más pequeño para los elementos de la lista */
+    padding: 10px;
+    /* Ajustamos el relleno para que sea coherente */
+  }
+}
+
+/* FAQSection.css */
+.faq-section {
+  color: white;
+  background-color: #000;
+  /* Fondo negro */
+  padding: 40px;
+  /* Ajusta según sea necesario */
+  font-family: 'Arial', sans-serif;
+  /* Usa la fuente deseada */
+}
+
+.faq-header h2 {
+  text-transform: uppercase;
+  opacity: 0.7;
+  /* Opacidad reducida para el subtítulo */
+  font-size: 1.2rem;
+  /* Aumenta el tamaño de la fuente */
+  margin-bottom: 0.5rem;
+  /* Espacio debajo del subtítulo */
+}
+
+.faq-header h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  /* Tamaño de fuente más grande para el título principal */
+  margin-bottom: 1rem;
+  /* Espacio debajo del título principal */
+  font-weight: bold;
+  /* Fuente en negrita */
+}
+
+.faq-header p {
+  margin-bottom: 2rem;
+  /* Espacio adicional debajo del párrafo */
+}
+
+.faq-list {
+  border-top: 1px solid #333;
+  /* Línea divisoria en la parte superior de la lista */
+}
+
+.faq-item {
+  border-bottom: 1px solid #333;
+  /* Línea divisoria para cada pregunta */
+  padding: 1.5rem 0;
+  /* Más espacio verticalmente */
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  /* Tamaño de fuente más grande para las preguntas */
+  font-weight: bold;
+  /* Fuente en negrita para las preguntas */
+  transition: all 0.3s ease;
+  /* Transición suave para efectos hover y active */
+}
+
+.faq-question:hover,
+.faq-question.active {
+  color: #3978f8;
+  /* Cambio de color al pasar el ratón por encima y cuando está activo */
+}
+
+.faq-toggle {
+  float: right;
+  font-size: 1.5rem;
+  /* Tamaño de fuente más grande para el símbolo de toggle */
+  transition: transform 0.3s ease;
+  /* Transición suave para la rotación del toggle */
+}
+
+.faq-question.active .faq-toggle {
+  transform: rotate(45deg);
+  /* Rotación del símbolo de toggle cuando está activo */
+}
+
+.faq-answer {
+  display: none;
+  /* Oculta la respuesta inicialmente */
+  padding-top: 10px;
+  /* Espacio antes de la respuesta */
+  font-size: 1rem;
+  /* Tamaño de fuente para la respuesta */
+  text-align: justify;
+  /* Alineación justificada para una mejor legibilidad */
+}
+
+.faq-question.active+.faq-answer {
+  display: block;
+  /* Muestra la respuesta cuando la pregunta está activa */
+  animation: fadeIn 0.7s ease-in-out;
+  /* Animación suave al aparecer */
+}
+
+/* Animación para el efecto fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media queries para pantallas de móviles */
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 20px;
+    /* Reducimos el padding para dispositivos móviles */
+  }
+
+  .faq-header h2 {
+    font-size: 1rem;
+    /* Reducimos el tamaño de la fuente para el subtítulo */
+    margin-bottom: 0.25rem;
+    /* Menos espacio debajo del subtítulo */
+  }
+
+  .faq-header h1 {
+    font-size: 1.8rem;
+    /* Reducimos el tamaño de la fuente para el título principal */
+    margin-bottom: 0.5rem;
+    /* Menos espacio debajo del título principal */
+  }
+
+  .faq-header p {
+    margin-bottom: 1rem;
+    /* Menos espacio debajo del párrafo */
+    font-size: 0.9rem;
+    /* Opcional: Puedes reducir la fuente del párrafo si es necesario */
+  }
+
+  .faq-item {
+    padding: 1rem 0;
+    /* Menos espacio vertical para cada pregunta */
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    /* Tamaño de fuente más pequeño para las preguntas */
+    /* Opcional: puedes añadir padding a los botones para hacerlos más fáciles de tocar */
+  }
+
+  .faq-toggle {
+    font-size: 1.2rem;
+    /* Un poco más grande para facilitar la interacción táctil */
+  }
+
+  .faq-answer {
+    /* Ajusta el tamaño de la fuente y el padding según sea necesario para las respuestas */
+    font-size: 0.9rem;
+    /* Tamaño de fuente más pequeño para las respuestas */
+  }
+
+  /* Si necesitas ajustar algo cuando la respuesta está activa, también puedes hacerlo aquí */
+  .faq-question.active+.faq-answer {
+    /* Ajustes para la respuesta activa en móviles */
+  }
+}
+
+
 
 /************ timeline Css ************/
 
@@ -1127,6 +1560,7 @@ nav.navbar .navbar-collapse {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .contact form input,
@@ -1294,9 +1728,7 @@ nav.navbar .navbar-collapse {
   }
 }
 
-
-
-/*  */
+/* global, APP */
 
 .App {
   text-align: center;
