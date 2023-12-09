@@ -7,12 +7,11 @@ import { Projects } from './components/Projects';
 import FAQSection from './components/FAQSection';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import TestimonialsSection from './components/Testimonials';
 
-// import { Testimonials } from './components/Testimonials';
 // import { AboutUs } from './components/Aboutus';
 // import { Timeline } from './components/Timeline';
 // import { Skills } from './components/Skills';
-
 
 function App() {
   return (
@@ -26,7 +25,8 @@ function App() {
       {/* necesitamos refactorizar timeline, que no se llame asi y que sea mas directo  */}
       {/* <Timeline /> */}
       {/* <Skills /> */}
-      {/* <Testimonials /> */}
+      <TestimonialsSection />
+
       {/* arreglar el contact form */}
       <Contact />
       <Footer />

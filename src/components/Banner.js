@@ -51,7 +51,7 @@ export const Banner = () => {
                         <h1>{"</> "}<span className="wrap">{text}</span></h1>
                         <p style={{ color: 'white', textAlign: 'center' }}>Let's turn your idea into a reality</p>
 
-                        <a id="link-card-project" href="https://www.linkedin.com/company/softdone/" target="_blank"><button onClick={() => console.log('Hi, you are connect')}>Contact us <ArrowRightCircle size={25} /></button></a>
+                        <a id="link-card-project" href="#connect" ><button onClick={() => console.log('Hi, you are connect')}>Contact us <ArrowRightCircle size={25} /></button></a>
                     </Col>
                     {/* <Col xs={12} md={12} xl={12}>
                         <img src={headerImg} alt="Header img"></img>

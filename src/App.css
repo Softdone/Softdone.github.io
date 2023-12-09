@@ -477,7 +477,7 @@ nav.navbar .navbar-collapse {
   /* This ensures that all service-category elements take up equal width */
   min-height: 300px;
   /* Adjust the min-height as needed to ensure they start off the same */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
   background: #ffffff;
   /* or any other color */
@@ -488,35 +488,41 @@ nav.navbar .navbar-collapse {
 .service-category:hover {
   transform: translateY(-5px);
   /* Slight raise on hover for interactivity */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   /* Enhanced shadow on hover for depth */
 }
 
 .service-icon {
-  font-size: 4rem; /* Haz el ícono más grande si es necesario */
-  color: #0658F6; /* Ajusta a un azul claro según la imagen proporcionada */
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  /* Haz el ícono más grande si es necesario */
+  color: #0658F6;
+  /* Ajusta a un azul claro según la imagen proporcionada */
+  margin-bottom: 20px;
   align-self: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 64px; /* Puedes ajustar esto si necesitas que el contenedor del ícono sea más grande */
-  height: 64px; /* Asegúrate de que width y height sean iguales para mantener la forma circular */
+  width: 64px;
+  /* Puedes ajustar esto si necesitas que el contenedor del ícono sea más grande */
+  height: 64px;
+  /* Asegúrate de que width y height sean iguales para mantener la forma circular */
 }
 
 .service-category span {
-  font-size: 4rem; /* Haz el ícono más grande si es necesario */
-  color: #0658F6; /* Ajusta a un azul claro según la imagen proporcionada */
+  font-size: 4rem;
+  /* Haz el ícono más grande si es necesario */
+  color: #0658F6;
+  /* Ajusta a un azul claro según la imagen proporcionada */
   margin-bottom: 1rem;
 }
 
-
-
 .service-icon:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón por encima */
-  color: #003cb3; /* Cambiamos el color a un azul más oscuro al pasar el ratón por encima, si se desea */
+  transform: scale(1.1);
+  /* Aumenta ligeramente el tamaño al pasar el ratón por encima */
+  color: #003cb3;
+  /* Cambiamos el color a un azul más oscuro al pasar el ratón por encima, si se desea */
 }
 
 .service-category h2 {
@@ -525,7 +531,7 @@ nav.navbar .navbar-collapse {
   /* Tamaño de fuente grande para mayor impacto visual */
   font-weight: bold;
   /* Negrita para destacar el título */
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   /* Espacio debajo para separarlo del contenido que sigue */
   color: #000;
   /* Color negro para el texto, puedes cambiarlo por un gradiente si deseas */
@@ -570,6 +576,7 @@ nav.navbar .navbar-collapse {
 }
 
 .service-category ul {
+  margin-top: 15px;
   text-align: center;
   list-style: none;
   padding: 0;
@@ -675,6 +682,7 @@ nav.navbar .navbar-collapse {
   }
 
   .service-category h2 {
+    color: #0658F6;
     font-size: 1.2rem;
     /* También reducimos el tamaño del título para adaptarnos al espacio */
     margin-bottom: 15px;
@@ -1387,163 +1395,244 @@ nav.navbar .navbar-collapse {
   }
 }
 
+/* testimonials */
+.testimonials-section {
+  width: 100%;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #0658F6 0%, #497BFC 100%);
+  text-align: center;
+}
 
-/************ testimonials Css ************/
 
 .testimonial {
-  padding: 25px 0;
-  /* Simplificación de la definición del padding */
+  max-width: 600px;
+  /* Ancho máximo para cada testimonial */
+  margin: 20px auto;
+  /* Centrar los testimoniales y dar espacio arriba y abajo */
+  padding: 20px;
+  background: white;
+  /* Fondo blanco para cada testimonial */
+  border-radius: 15px;
+  /* Bordes redondeados suaves */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  display: flex;
+  /* Utilizar flexbox para alinear imagen y texto */
+  flex-direction: column;
+  /* Elementos apilados verticalmente */
+  align-items: center;
+  /* Centrar elementos horizontalmente */
+  gap: 10px;
+  /* Espacio entre elementos */
+}
+
+.testimonial img {
+  border-radius: 50%;
+  /* Imágenes redondas para avatares */
+  width: 120px;
+  /* Tamaño más grande para avatares */
+  height: 120px;
+  /* Mantener la relación de aspecto */
+  object-fit: cover;
+  /* Asegurar que la imagen cubra el espacio sin distorsionarse */
+  border: 3px solid #eee;
+  /* Borde sólido para que resalte sobre el fondo blanco */
+  margin-top: -30px;
+  /* Ajusta esta cantidad para bajar la imagen */
+  background: white;
+  /* Fondo blanco para evitar que se vea el fondo al cargar */
+  z-index: 1;
+  /* Asegúrate de que la imagen esté sobre otros elementos */
   position: relative;
-  background-image: url('./assets/img/bkg-blue.png');
-  background-position: center;
-  /* Centrar el fondo para que siempre esté en el medio */
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* Necesario para que z-index tenga efecto */
 }
 
-.testimonial-bx {
-  background: rgba(64, 148, 227, 0.8);
-  /* Añadir más opacidad para mejor legibilidad del texto */
-  border-radius: 50px;
-  /* Suavizar el borde */
-  text-align: center;
-  padding: 30px;
-  /* Ajustar el padding para una mejor distribución */
-  margin-top: 0;
-  /* Eliminar el margen negativo */
-}
-
-#testimonial-bx-text {
-  color: #4A2FBD;
-  width: 75%;
-  /* Aumentar un poco el ancho para una mejor distribución del texto */
-  margin: 0 auto;
-  /* Centrar el texto */
-}
-
-.testimonial h2 {
-  font-size: 45px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 20px;
-  /* Espacio debajo del título para separarlo del contenido siguiente */
+.testimonial h3 {
+  font-size: 1.2rem;
+  /* Tamaño de fuente para el nombre */
+  color: #333;
+  /* Color oscuro para el texto */
+  margin: 0;
+  /* Quitar el margen por defecto */
 }
 
 .testimonial p {
-  color: #000000;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 10px 0;
-  /* Ajuste en márgenes */
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 1rem;
+  /* Tamaño de fuente para el título */
+  color: #777;
+  /* Color más claro para el título/descripción */
+  margin: 0;
+  /* Quitar el margen por defecto */
 }
 
-.testimonial-slider {
-  width: 85%;
-  /* Aumentar el ancho para un mejor aprovechamiento del espacio */
-  margin: 20px auto;
-  /* Ajuste en el margen */
+.testimonial blockquote {
+  font-style: normal;
+  /* Quitar la cursiva para seguir el estilo de Instagram */
+  font-size: 0.9rem;
+  /* Tamaño de fuente más pequeño para la cita */
+  color: #555;
+  /* Color de texto para la cita */
+  border-left: 3px solid #ddd;
+  /* Barra vertical para indicar que es una cita */
+  padding-left: 15px;
+  /* Espacio a la izquierda de la cita */
+  text-align: left;
+  /* Alinear el texto a la izquierda */
+  margin: 20px 0;
+  /* Espacio arriba y abajo de la cita */
 }
 
-.testimonial-slider .item {
-  background: rgba(255, 255, 255, 0.95);
-  /* Añadir más opacidad al fondo */
-  border-radius: 15px;
-  /* Suavizar el borde */
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  /* Suavizar la sombra */
-  text-align: center;
-  width: 85%;
-  /* Aumentar el ancho del ítem */
-  margin: 20px auto;
-  /* Ajuste en el margen */
-  transition: transform 0.3s;
+/* Selector para los puntos de navegación de Slick Slider */
+.slick-dots li button:before {
+  font-size: 12px;
+  /* Ajustar el tamaño si es necesario */
+  color: #fff;
+  /* Cambiar a blanco para contraste */
 }
 
-.testimonial-slider .item:hover {
-  transform: translateY(-8px);
-  /* Suavizar el efecto de elevación */
+.slick-dots li.slick-active button:before {
+  color: #000;
+  /* Color más oscuro para el punto activo */
 }
 
-.testimonial-slider .item img {
-  width: 20%;
-  /* Aumentar un poco el tamaño de la imagen */
-  margin: 15px auto;
-  /* Ajuste en el margen */
-  border-radius: 50%;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  /* Suavizar la sombra en la imagen */
+.find-us-section {
+  margin-top: 50px;
+  /* Aumenta el espacio en la parte superior */
 }
 
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+.platform-buttons {
+  margin-top: 15px;
+  /* Aumenta el espacio en la parte superior */
 }
 
-/* Media Queries para dispositivos móviles */
-@media only screen and (max-width: 768px) {
+.platform-buttons button {
+  margin: 0 5px;
+  /* Spacing between buttons */
+  padding: 10px 20px;
+  /* Button padding */
+  border: none;
+  /* Remove border */
+  background-color: #0658F6;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  text-transform: uppercase;
+  /* Uppercase text for button */
+  font-weight: bold;
+  /* Bold font for the button text */
+  transition: background-color 0.3s ease;
+  /* Transition for hover effect */
+}
 
+.platform-buttons button:hover {
+  background-color: #003cb3;
+  /* Darker shade on hover */
+}
+
+.button {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre botones */
+  font-weight: bold;
+  color: white;
+  background-color: #0658F6; /* Color principal de los botones */
+  padding: 10px 20px; /* Espaciado interno para los botones */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.button:hover {
+  background-color: #0468d7; /* Un tono más claro al pasar el ratón */
+  transform: translateY(-2px); /* Eleva ligeramente el botón */
+}
+
+.button:active {
+  transform: scale(0.98); /* Efecto de pulsación al hacer clic */
+}
+
+
+
+
+/* Add responsive media queries if needed */
+@media (max-width: 768px) {
+  .platform-buttons button {
+    padding: 8px 16px;
+    /* Slightly smaller padding on smaller screens */
+  }
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
   .testimonial {
-    padding: 15px 0;
-    /* Reducir el padding para pantallas pequeñas */
+    max-width: 500px;
+    /* Ancho más pequeño para tablets */
+    padding: 15px;
+    /* Menos padding */
   }
 
-  .testimonial-bx {
-    padding: 20px;
-    /* Reducir el padding del box de testimonios */
-    border-radius: 30px;
-    /* Suavizar el borde en móviles */
+  .testimonial img {
+    width: 100px;
+    /* Avatar más pequeño */
+    height: 100px;
+    /* Altura ajustada para mantener la proporción */
+    margin-top: -20px;
+    /* Ajustar la superposición */
   }
 
-  #testimonial-bx-text {
-    width: 90%;
-    /* Aumentar el ancho del texto en dispositivos móviles */
-  }
-
-  .testimonial h2 {
-    font-size: 30px;
-    /* Reducir el tamaño de la fuente del título */
-    margin-bottom: 15px;
-    /* Ajuste en el margen debajo del título */
+  .testimonial h3 {
+    font-size: 1rem;
+    /* Tamaño de fuente más pequeño para nombres */
   }
 
   .testimonial p {
-    font-size: 16px;
-    /* Ajustar el tamaño de la fuente para los párrafos */
-    margin: 8px 0;
-    /* Ajuste en márgenes para los párrafos */
+    font-size: 0.9rem;
+    /* Tamaño de fuente más pequeño para títulos */
   }
 
-  .testimonial-slider {
-    width: 95%;
-    /* Aprovechar el ancho completo en móviles */
+  .testimonial blockquote {
+    font-size: 0.8rem;
+    /* Tamaño de fuente más pequeño para citas */
+  }
+}
+
+/* Estilos para teléfonos móviles */
+@media (max-width: 480px) {
+  .testimonial {
+    max-width: 100%;
+    /* Aprovecha todo el ancho disponible */
+    margin: 10px;
+    /* Menos margen */
   }
 
-  .testimonial-slider .item {
-    width: 100%;
-    /* Hacer que el ítem tome todo el ancho */
-    margin: 15px auto;
-    /* Ajuste en el margen */
+  .testimonial img {
+    width: 80px;
+    /* Avatar más pequeño */
+    height: 80px;
+    /* Altura ajustada para mantener la proporción */
+    margin-top: -10px;
+    /* Ajustar la superposición */
   }
 
-  .testimonial-slider .item img {
-    width: 25%;
-    /* Ajustar el tamaño de la imagen en móviles */
-    margin: 10px auto;
-    /* Ajuste en el margen de la imagen */
+  .testimonial h3,
+  .testimonial p,
+  .testimonial blockquote {
+    padding: 0 10px;
+    /* Añadir padding a los lados para no tocar los bordes */
   }
 
-  /* Es posible que quieras ocultar o ajustar la posición de la imagen de fondo en móviles */
-  .background-image-left {
-    display: none;
-    /* Ocultar la imagen de fondo en móviles */
+  .testimonial blockquote {
+    font-size: 0.75rem;
+    /* Tamaño de fuente aún más pequeño para citas en móviles */
   }
-
 }
 
 /************ Contact Css ************/
