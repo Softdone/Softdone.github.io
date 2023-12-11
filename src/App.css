@@ -1235,16 +1235,41 @@ nav.navbar .navbar-collapse {
 }
 
 .project-slider {
-  width: 80%;
-  margin: 0px auto;
+  width: 90%; /* Slightly increased width */
+  margin: 0 auto; /* Centered horizontally */
   position: relative;
+  padding: 20px; /* Padding around the slider for spacing from other elements */
+
+}
+
+.project-slider .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Height adjusted to fit the content */
+  margin: 20px; /* More space around each item */
+  padding: 10px; /* Padding inside each item */
+  border-radius: 20px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for each item */
+  background-color: #0656f65e; /* Changed to a white background for better contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project-slider .item:hover {
+  transform: scale(1.03); /* Gentle scaling effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
 }
 
 .project-slider .item img {
-  width: 45%;
-  margin: 0 auto 10px auto;
+  max-width: 100%; /* Max-width to ensure the image is responsive */
+  max-height: 180px; /* Max-height to keep images uniform */
+  object-fit: contain; /* Ensures images don't get cropped or distorted */
 }
 
+
+
+
+  /* proyectos web */
 .background-image-left {
   top: 28%;
   position: absolute;
@@ -1269,7 +1294,7 @@ nav.navbar .navbar-collapse {
 
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #0658F6 -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #0658F6 -5.91%, #0656f65e 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -1296,6 +1321,16 @@ nav.navbar .navbar-collapse {
   top: 50%;
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
 
 .project .nav.nav-pills {
   border-radius: 50px; /* Maintains the rounded corners */
