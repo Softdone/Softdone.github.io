@@ -1231,7 +1231,7 @@ nav.navbar .navbar-collapse {
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px 0 75px 0;
+  margin: 14px 0 25px 0;
 }
 
 .project-slider {
@@ -1297,63 +1297,46 @@ nav.navbar .navbar-collapse {
   opacity: 1;
 }
 
-
 .project .nav.nav-pills {
-  width: 60%;
-  margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
+  border-radius: 50px; /* Maintains the rounded corners */
+  background-color: transparent; /* Removes the large pill background */
+  box-shadow: none; /* Removes any shadow that may be suggesting a large pill */
 }
 
-.project .nav.nav-pills .nav-item {
-  width: 50%;
+.project .nav-pills .nav-link {
+  display: inline-block; /* Allows custom shaping */
+  margin: 0 20px; /* Adds space around each pill for emphasis */
+  padding: 15px 30px; /* Generous padding for a pill shape */
+  color: #fff; /* White text for contrast */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly visible background for inactive state */
+  border-radius: 25px; /* Rounded edges for a pill shape */
+  font-size: 17px; /* Increased font size for legibility */
+  transition: all 0.3s ease; /* Smooth transition for interaction states */
+  text-decoration: none; /* Removes underline from links */
 }
 
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #fff;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  z-index: 0;
+.project .nav-pills .nav-link.active {
+  color: #0658F6; /* Blue text for the active state */
+  background-color: #fff; /* Solid white background for the active pill */
+  border-radius: 25px; /* Maintains the pill shape */
 }
 
+/* Hover effect to provide feedback */
+.project .nav-pills .nav-link:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Lightens the background on hover */
+}
+
+/* We'll remove any ::before pseudo-element that may be adding extra visuals we no longer need */
 .project .nav.nav-pills .nav-link::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(90.21deg, #0658F6 -5.91%, #ede9e9 111.58%);
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.2s ease-in-out;
+  content: none; /* Eliminates the pseudo-element */
 }
 
-.project .nav.nav-pills .nav-link.active::before {
-  width: 100% !important;
+/* Make sure the focus state is clear for accessibility */
+.project .nav-pills .nav-link:focus {
+  outline: none; /* Removes the default outline */
+  box-shadow: 0 0 0 2px rgba(6, 88, 246, 0.5); /* Custom focus glow */
 }
 
-.project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgba(255, 255, 255, 1);
-}
-
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
-}
-
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
 
 @media screen and (max-width: 768px) {
   .project h2 {
@@ -1385,15 +1368,45 @@ nav.navbar .navbar-collapse {
     width: 80%;
   }
 
-  .project .nav.nav-pills {
-    width: 80%;
+  .project .nav-pills .nav-link {
+    margin: 0 10px; /* Slightly less space around each pill */
+    padding: 12px 25px; /* Slightly less padding for a smaller pill shape */
+    font-size: 15px; /* Slightly smaller font size to fit more content */
   }
 
-  .project .nav.nav-pills .nav-link {
-    font-size: 14px;
-    padding: 10px 0;
+  .project .nav-pills {
+    display: flex; /* Ensure flex display for proper alignment */
+    justify-content: center; /* Center pills in the available space */
   }
 }
+
+/* Media Queries for Mobiles (480px) */
+@media (max-width: 480px) {
+  .project .nav-pills .nav-item {
+    display: flex; /* Enables flexbox for nav-items */
+    flex-grow: 1; /* Each nav-item will grow equally */
+    width: 100%; /* Full width to use the available space */
+  }
+
+  .project .nav-pills .nav-link {
+    flex-grow: 1; /* Allows the link to fill the nav-item */
+    width: 100%; /* Ensures the link fills the width of the nav-item */
+    margin: 0; /* Reset margins */
+    padding: 15px 0; /* Vertical padding only, horizontal will be taken care of by flex-grow */
+    text-align: center; /* Ensures text is centered */
+    border-radius: 30px; /* Fully rounded edges for a pill shape */
+  }
+
+  .project .nav-pills {
+    flex-direction: column; /* Stack the pills vertically */
+    gap: 15px; /* Add some space between the stacked pills */
+  }
+
+  /* Adjustments for active state and hover effects as needed */
+}
+
+
+
 
 /* testimonials */
 .testimonials-section {
