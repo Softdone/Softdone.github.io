@@ -10,11 +10,11 @@ export const Footer = () => {
         <footer className="footer">
             <Container>
                 <Row className="align-items-center">
-                    <Col sm={6}>
+                    <Col sm={5}>
                         <img src={logo} alt='Logo' className="footer-logo" />
                     </Col>
 
-                    <Col sm={6}>
+                    <Col sm={3}>
 
                         <div className="footer-icons-box">
                             <div className="social-icon">
@@ -24,8 +24,10 @@ export const Footer = () => {
                                 <a target="_blank" href="https://github.com/Softdone"><img src={navIcon3} alt="git-icon" /></a>
                             </div>
                         </div>
-                        <div className="footer-CR-box">
-                            <p>Softdone CopyRight 2023. All right Reserved</p>
+                    </Col>
+                    <Col sm={3}>
+                    <div className="footer-CR-box">
+                            <p>Softdone CopyRight 2023.<br /> All right Reserved</p>
                         </div>
                     </Col>
                 </Row>

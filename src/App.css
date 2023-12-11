@@ -1405,6 +1405,7 @@ nav.navbar .navbar-collapse {
 
 
 .testimonial {
+  height: 325px;
   max-width: 600px;
   /* Ancho máximo para cada testimonial */
   margin: 20px auto;
@@ -1424,6 +1425,8 @@ nav.navbar .navbar-collapse {
   /* Centrar elementos horizontalmente */
   gap: 10px;
   /* Espacio entre elementos */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .testimonial img {
@@ -1541,99 +1544,102 @@ nav.navbar .navbar-collapse {
 .buttons-container {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espacio entre botones */
+  gap: 20px;
+  /* Espacio entre botones */
   font-weight: bold;
   color: white;
-  background-color: #0658F6; /* Color principal de los botones */
-  padding: 10px 20px; /* Espaciado interno para los botones */
-  border-radius: 5px; /* Bordes redondeados */
+  background-color: #0658F6;
+  /* Color principal de los botones */
+  padding: 10px 20px;
+  /* Espaciado interno para los botones */
+  border-radius: 5px;
+  /* Bordes redondeados */
 }
 
 
 .button:hover {
-  background-color: #0468d7; /* Un tono más claro al pasar el ratón */
-  transform: translateY(-2px); /* Eleva ligeramente el botón */
+  background-color: #0468d7;
+  /* Un tono más claro al pasar el ratón */
+  transform: translateY(-2px);
+  /* Eleva ligeramente el botón */
 }
 
 .button:active {
-  transform: scale(0.98); /* Efecto de pulsación al hacer clic */
+  transform: scale(0.98);
+  /* Efecto de pulsación al hacer clic */
 }
 
 
-
-
-/* Add responsive media queries if needed */
-@media (max-width: 768px) {
-  .platform-buttons button {
-    padding: 8px 16px;
-    /* Slightly smaller padding on smaller screens */
-  }
-}
-
-/* Estilos para tablets */
+/* Styles for tablets */
 @media (max-width: 768px) {
   .testimonial {
-    max-width: 500px;
-    /* Ancho más pequeño para tablets */
+    max-width: 80%;
+    /* Use percentage for responsive width */
     padding: 15px;
-    /* Menos padding */
+    /* Adjust padding as needed */
   }
 
   .testimonial img {
     width: 100px;
-    /* Avatar más pequeño */
+    /* Adjust avatar size as needed */
     height: 100px;
-    /* Altura ajustada para mantener la proporción */
-    margin-top: -20px;
-    /* Ajustar la superposición */
+    /* Keep the aspect ratio square */
+    margin-top: -30px;
+    /* Pull the avatar up to overlap the card slightly */
+    border-radius: 50%;
+    /* Add this to make the avatar circular */
   }
 
   .testimonial h3 {
-    font-size: 1rem;
-    /* Tamaño de fuente más pequeño para nombres */
+    font-size: 1.2rem;
+    /* Increase the font size for better readability */
   }
 
   .testimonial p {
-    font-size: 0.9rem;
-    /* Tamaño de fuente más pequeño para títulos */
+    font-size: 1rem;
+    /* Slightly larger font size for titles */
   }
 
   .testimonial blockquote {
-    font-size: 0.8rem;
-    /* Tamaño de fuente más pequeño para citas */
+    font-size: 0.9rem;
+    /* Adjust blockquote font size for readability */
   }
 }
 
-/* Estilos para teléfonos móviles */
+/* Styles for mobile phones */
 @media (max-width: 480px) {
   .testimonial {
-    max-width: 100%;
-    /* Aprovecha todo el ancho disponible */
-    margin: 10px;
-    /* Menos margen */
+    max-width: 90%;
+    /* Use more width for a better fit */
+    margin: 20px auto;
+    /* Center the card with automatic horizontal margins */
+    padding: 15px;
+    /* Consistent padding with tablet view */
   }
 
   .testimonial img {
-    width: 80px;
-    /* Avatar más pequeño */
-    height: 80px;
-    /* Altura ajustada para mantener la proporción */
-    margin-top: -10px;
-    /* Ajustar la superposición */
+    width: 90px;
+    /* Slightly reduce the avatar size */
+    height: 90px;
+    /* Keep the aspect ratio */
+    margin-top: -30px;
+    /* Adjust the overlap as per the new size */
   }
 
   .testimonial h3,
   .testimonial p,
   .testimonial blockquote {
-    padding: 0 10px;
-    /* Añadir padding a los lados para no tocar los bordes */
+    padding: 0 15px;
+    /* Increase side padding for breathing space */
   }
 
   .testimonial blockquote {
-    font-size: 0.75rem;
-    /* Tamaño de fuente aún más pequeño para citas en móviles */
+    font-size: 0.85rem;
+    /* Slightly larger font size than previously set for blockquotes */
   }
 }
+
+
 
 /************ Contact Css ************/
 .contact {
@@ -1757,7 +1763,6 @@ nav.navbar .navbar-collapse {
   }
 }
 
-
 /************ Footer Css ************/
 
 .footer {
@@ -1766,54 +1771,91 @@ nav.navbar .navbar-collapse {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-height: 250px !important;
+  max-height: 250px;
+  color: #ffffff;
+  /* Let's keep the text color consistent */
+  text-align: center;
+  /* Centering footer content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* This centers the content horizontally and vertically */
 }
 
 .footer-logo {
   margin-top: 25px;
   width: 50%;
+  max-width: 200px;
+  /* Prevents the logo from becoming too big on larger screens */
 }
 
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #ffffff;
+  color: inherit;
+  /* Inherits color from the parent for consistency */
   letter-spacing: 0.5px;
   margin-top: 20px;
+  margin-bottom: 0;
+  /* Remove default margin from paragraphs if any */
 }
 
 .footer-icons-box {
   margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  /* Align icons to center */
 }
 
 .footer-CR-box {
   margin: 20px auto;
+  padding: 10px;
+  /* Give it some breathing room */
 }
 
-/* Media Queries para dispositivos móviles */
+/* Media Queries for mobile devices */
 @media only screen and (max-width: 768px) {
-
   .footer {
-    padding: 10px 0;
-    /* Reducción adicional del padding en móviles */
-    max-height: auto !important;
+    padding: 20px;
+    /* A little more padding for a touch of space */
+    max-height: none;
+    /* Remove max-height restriction */
+    /* Keep the background styles the same unless you want to change the image for mobile */
   }
 
   .footer-logo {
-    margin-top: 10px;
-    width: 70%;
+    margin-top: 15px;
+    /* A bit less margin on the top */
+    width: 60%;
+    /* A bit more width since we have more space vertically */
+    max-width: 150px;
+    /* A smaller max-width for smaller screens */
   }
 
   .footer p {
-    font-size: 12px;
-    margin-top: 8px;
-    /* Reducción adicional del margen superior */
+    font-size: 16px;
+    /* A bit larger font size for those reading on the go */
+    margin-top: 15px;
+    /* Slightly less margin for a more compact look */
+    padding: 0 10px;
+    /* Add padding to keep the text from the edges */
   }
 
-  .footer-icons-box,
+  .footer-icons-box {
+    margin: 15px auto;
+    /* Slightly less margin for a tighter look */
+    flex-direction: column;
+    /* Stack icons vertically for smaller screens */
+    gap: 10px;
+    /* Add a gap between stacked icons */
+  }
+
   .footer-CR-box {
-    margin: 8px auto;
-    /* Reducción adicional del margen en móviles */
+    margin: 15px auto;
+    /* Again, a bit less margin for a more compact look */
+    padding: 15px;
+    /* More padding for a plumper feel */
   }
 }
 
@@ -1821,6 +1863,7 @@ nav.navbar .navbar-collapse {
 
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -1910,16 +1953,6 @@ nav.navbar .navbar-collapse {
   letter-spacing: 0.5px;
   border-radius: 18px;
 } */
-
-
-
-
-
-
-
-
-
-
 
 /************ Projects Css ************/
 /* #link-card-project {
@@ -2075,9 +2108,6 @@ nav.navbar .navbar-collapse {
   right: 0;
   z-index: -4;
 } */
-
-
-
 
 /* .carousel-root {
   width: 64% !important;

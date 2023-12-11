@@ -3,8 +3,6 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 const TestimonialsSection = () => {
   const settings = {
     dots: true, // Muestra puntos de navegación en la parte inferior del carrusel
@@ -17,15 +15,12 @@ const TestimonialsSection = () => {
     variableWidth: false // Ancho fijo para cada slide
   };
 
-
   const testimonials = [
     // Tu array de testimoniales aquí
-
-
     {
       "name": "Cristobal Niño",
       "title": "Founder at Servismedicamp",
-      "quote": "Softdone played a crucial role in revolutionizing our online presence through the development of our application. Their keen ability to embody our brand's essence into the app's design has been vital for our success. Their meticulous attention to detail and technological innovation has given us a substantial competitive edge.",
+      "quote": "Softdone played a crucial role in revolutionizing our online presence through the development of our application. Their keen ability to embody our brand's essence into the app's design has been vital for our success.",
       "image": "https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1576497771/content-items/003/518/364/FernandoKrapp-85-2-original.jpg?1576497771"
     },
 

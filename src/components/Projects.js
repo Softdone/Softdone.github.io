@@ -19,7 +19,7 @@ import proj10 from '../assets/img/Valofast.png';
 export const Projects = () => {
 
     const mobiles = [
-  
+
         {
             title: "Motivacion secu",
             imgUrl: proj2,
@@ -169,7 +169,7 @@ export const Projects = () => {
                                             }
                                         </Row>
                                     </Tab.Pane>
-                                    
+
                                 </Tab.Content>
                             </Tab.Container>
                         </div>
