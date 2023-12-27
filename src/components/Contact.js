@@ -59,23 +59,23 @@ export const Contact = () => {
                                     <form onSubmit={handleSubmit}>
                                         <Row>
                                             <Col size={12} className="px-1">
-                                                <label>First Name</label>
+
                                                 <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} name="firstName" />
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
-                                                <label>Last Name</label>
+
                                                 <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} name="lastName" />
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
-                                                <label>Email Address</label>
+
                                                 <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} name="email" />
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
-                                                <label>Phone No.</label>
+
                                                 <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)} name="phone" />
                                             </Col>
                                             <Col size={12} className="px-1">
-                                                <label>Message</label>
+
                                                 <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} name="message"></textarea>
                                                 <button type="submit"><span>{buttonText}</span></button>
                                             </Col>
