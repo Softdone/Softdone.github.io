@@ -21,7 +21,7 @@ export const Projects = () => {
     const mobiles = [
 
         {
-            title: "Motivacion secu",
+            title: "Motivación secu",
             imgUrl: proj2,
         },
 
@@ -122,7 +122,7 @@ export const Projects = () => {
                                 <h2 style={{ color: '#fff' }}>
                                     Projects
                                 </h2>
-                                <p style={{ color: '#fff' }}>At Softdone, we develop:</p>
+                                <p style={{ color: '#fff' }}>At Softdone, we developed:</p>
                             </div>
 
                             <Tab.Container id="projects-tabs" defaultActiveKey="first">
