@@ -1,4 +1,5 @@
 # Softdone Landing page
+![image](https://github.com/Softdone/softdone.github.io/assets/44554474/2be4e660-5103-406a-a30c-e11e437a9bf3)
 
 ## Available Scripts
 
@@ -37,32 +38,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 🧞 Commands
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All commands are run from the root of the project, from a terminal:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Comando    | Descripción                                        |
+|------------|----------------------------------------------------|
+| `npm start` | Ejecuta la aplicación en modo de desarrollo. Abre [http://localhost:3000](http://localhost:3000) para verla en el navegador. |
+| `npm run predeploy` | Ejecuta el script `build` para construir la aplicación para producción en la carpeta `build`. |
+| `npm run deploy` | Despliega la aplicación en GitHub Pages desde la carpeta `build`. |
+| `npm run build` | Construye la aplicación para producción en la carpeta `build`. Compila correctamente React en modo de producción y optimiza la construcción para obtener el mejor rendimiento. |
+| `npm test` | Ejecuta los tests en modo interactivo. |
+| `npm run eject` | **Nota: ¡esta es una operación de un solo sentido!** Si ejecutas `eject`, ¡no puedes volver atrás! Este comando removerá la dependencia de construcción única de tu proyecto. |
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
