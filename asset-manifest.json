@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/softdone.github.io/static/css/main.b9c82e7c.css",
-    "main.js": "/softdone.github.io/static/js/main.6a902d0e.js",
+    "main.css": "/softdone.github.io/static/css/main.0357cf06.css",
+    "main.js": "/softdone.github.io/static/js/main.7007a8b4.js",
     "static/js/787.72fc65e2.chunk.js": "/softdone.github.io/static/js/787.72fc65e2.chunk.js",
     "static/media/alowespc.png": "/softdone.github.io/static/media/alowespc.e228fde78704a75d52b2.png",
     "static/media/nasapc.png": "/softdone.github.io/static/media/nasapc.4cc1ec35aecf2e738d2c.png",
@@ -30,12 +30,12 @@
     "index.html": "/softdone.github.io/index.html",
     "static/media/nav-icon1.svg": "/softdone.github.io/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/softdone.github.io/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.b9c82e7c.css.map": "/softdone.github.io/static/css/main.b9c82e7c.css.map",
-    "main.6a902d0e.js.map": "/softdone.github.io/static/js/main.6a902d0e.js.map",
+    "main.0357cf06.css.map": "/softdone.github.io/static/css/main.0357cf06.css.map",
+    "main.7007a8b4.js.map": "/softdone.github.io/static/js/main.7007a8b4.js.map",
     "787.72fc65e2.chunk.js.map": "/softdone.github.io/static/js/787.72fc65e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9c82e7c.css",
-    "static/js/main.6a902d0e.js"
+    "static/css/main.0357cf06.css",
+    "static/js/main.7007a8b4.js"
   ]
 }
