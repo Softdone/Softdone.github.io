@@ -1,6 +1,6 @@
 BSD 2-Clause License
 
-Copyright (c) [2023], [Josué Israel Esquivel Garza]
+Copyright (c) 2023, Josué Israel Esquivel Garza
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
