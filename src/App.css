@@ -1897,6 +1897,28 @@ nav.navbar .navbar-collapse {
   /* Give it some breathing room */
 }
 
+.footer-text-sm {
+  font-size: 0.875rem; /* Ajustando el tamaño del texto */
+  margin-top: 0.5rem; /* Un poco de margen en la parte superior */
+  color: #D1D5DB; /* Un gris claro para el texto pequeño */
+}
+
+.footer-link {
+  color: #BFDBFE; /* Un azul claro para los enlaces */
+  transition: color 0.3s ease-in-out; /* Transición suave para el color */
+}
+
+.footer-link:hover {
+  color: #93C5FD; /* Un azul más vibrante para el estado hover */
+  text-decoration: underline; /* Subrayado al pasar el mouse para destacar */
+}
+
+/* Especificaciones para el año actual */
+.footer-year {
+  font-weight: bold; /* Negrita para el año */
+  color: #EAB308; /* Un amarillo dorado para que resalte */
+}
+
 /* Media Queries for mobile devices */
 @media only screen and (max-width: 768px) {
   .footer {
@@ -1940,6 +1962,20 @@ nav.navbar .navbar-collapse {
     padding: 15px;
     /* More padding for a plumper feel */
   }
+
+  .footer-text-sm {
+    font-size: 0.75rem; /* Un tamaño de texto aún más pequeño para dispositivos móviles */
+    margin-top: 0.25rem; /* Menos margen en la parte superior */
+  }
+
+  .footer-link {
+    /* Mantenemos los estilos del enlace consistentes en móviles */
+  }
+
+  .footer-year {
+    /* No se necesita cambiar el año, pero aquí estaría el espacio si lo necesitases */
+  }
+
 }
 
 /* global, APP */

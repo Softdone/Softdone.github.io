@@ -25,11 +25,22 @@ export const Footer = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col sm={3}>
-                    <div className="footer-CR-box">
-                            <p>Softdone CopyRight 2023.<br /> All right Reserved</p>
-                        </div>
+                    <Col sm={3} className="footer-CR-box">
+                        <p className="footer-text-sm">
+                            Crafted with care by&nbsp;
+                            <a
+                                href="https://softdone.com.mx"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-link"
+                            >
+                                Softdone
+                            </a>
+                            <span className="footer-year">&nbsp;&copy; {new Date().getFullYear()}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved.
+                        </p>
                     </Col>
+
+
                 </Row>
             </Container>
         </footer>
